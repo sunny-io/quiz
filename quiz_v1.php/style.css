@@ -1,0 +1,35 @@
+:root{
+--background-top-color: #146CDB;
+--background-bottom-color:#07274F;
+--color-top-contrast:#FFF;
+--color-bottom-contrast:#FFF;
+}
+
+
+body{
+    background: linear-gradient (to bottom, var(--background-top-color), var(--background-bottom-color);
+}
+
+code {
+    font-family: monospace;
+    font-size: medium;
+    display: block;
+    white-space: pre-wrap
+}
+
+.hidden {
+    display: none;
+}
+
+.results {
+    display: block;
+}
+
+.login{
+    display: block;
+}
+
+.questions{
+    display: block;
+}
+
