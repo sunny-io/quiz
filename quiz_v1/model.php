@@ -42,6 +42,7 @@ $m_aAntwortauswahl [] = $m_aAktuelleFrage[$i];
 
 
 
+
 /* Antworten und Auswertung */
 
 $m_iEvaluate = 0;
