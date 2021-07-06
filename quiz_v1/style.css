@@ -1,35 +1,55 @@
-:root{
---background-top-color: #146CDB;
---background-bottom-color:#07274F;
---color-top-contrast:#FFF;
---color-bottom-contrast:#FFF;
+:root {
+  --background-top-color: #146cdb;
+  --background-bottom-color: #07274f;
+  --color-top-contrast: #fff;
+  --color-bottom-contrast: #fff;
 }
 
+body {
+  background: linear-gradient(
+      var(--background-top-color),
+      var(--background-bottom-color)
+    )
+    no-repeat;
+  height: 100vh;
+  color: var(--color-top-contrast);
+}
 
-body{
-    background: linear-gradient (to bottom, var(--background-top-color), var(--background-bottom-color);
+header {
+  height: 10vh;
+  display: flex;
+}
+
+footer {
+  height: 6vh;
+  display: flex;
+}
+
+.content {
+  min-height: 40vh;
+  max-height: 80vh;
+  outline: 1px solid red;
 }
 
 code {
-    font-family: monospace;
-    font-size: medium;
-    display: block;
-    white-space: pre-wrap
+  font-family: monospace;
+  font-size: medium;
+  display: block;
+  white-space: pre-wrap;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .results {
-    display: block;
+  display: block;
 }
 
-.login{
-    display: block;
+.login {
+  display: block;
 }
 
-.questions{
-    display: block;
+.questions {
+  display: block;
 }
-
