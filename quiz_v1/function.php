@@ -1,10 +1,12 @@
 <?php
 
 
-function showquestion ($m_aAntwortauswahl ){
-    if (isset($m_aAntwortauswahl )) {
-    foreach ($m_aAntwortauswahl  as $key )
-        echo "<li>".$m_aAntwortauswahl[$key]."</li>";
+function showquestion (array $liste){
+   {
+       $list = "";
+
+    foreach ($liste  as $value )
+        echo "<li>".$value."</li>";
     }
 }
 
