@@ -3,6 +3,7 @@
   --background-bottom-color: #07274f;
   --color-top-contrast: #fff;
   --color-bottom-contrast: #fff;
+  --color-contrast-hover: #ccd2db;
 }
 
 body {
@@ -15,6 +16,16 @@ body {
   color: var(--color-top-contrast);
 }
 
+a {
+  color: var(--color-bottom-contrast);
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  color: var(--color-contrast-hover);
+}
+
 header {
   height: 10vh;
   display: flex;
@@ -22,7 +33,15 @@ header {
 
 footer {
   height: 6vh;
+}
+
+footer ul {
   display: flex;
+  justify-content: space-between;
+}
+
+footer ul li {
+  padding-right: 3rem;
 }
 
 .content {
@@ -36,6 +55,10 @@ code {
   font-size: medium;
   display: block;
   white-space: pre-wrap;
+}
+
+ul {
+  list-style: none;
 }
 
 .hidden {

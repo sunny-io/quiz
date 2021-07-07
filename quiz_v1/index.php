@@ -14,7 +14,7 @@ $view = new View($quiz); //instaciates view
 
 /* output of page start with variables quiz name and version*/
 
-$view->vars["quizname"] = $quiz->name;
+$view->vars["quizname"] = $quiz->quizname;
 $view->vars["quizversion"] = $quiz_version;
 echo $view->load("views/pagestart.php");
 
