@@ -9,21 +9,24 @@
 ########################################################################################################
 
 class View {
-    var $quiz;
+   // var $quiz;
     var $vars = array(); 
+   private $viewpath;
 
-/* constructor passes on variables from quiz*/
+   function setPath($p) {
+    $this->viewpath = $p;
+   }
 
-    function __construct($quiz){
-        $this->quiz = $quiz;
-    }
+   function getPath (){
+    return $this->viewpath;
+   }
 
 /* grabs the mostly html view content, 
 * replaces any php-variables by their contents,and buffers als till output 
 */    
-   function load ($view){
+   function load (){
         ob_start();
-        include ($view);
+        include ($this->viewpath);
         $output = ob_get_contents();
         ob_get_clean();
         return $output;

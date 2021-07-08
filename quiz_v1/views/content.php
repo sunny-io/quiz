@@ -11,14 +11,14 @@
 
         <div class="laterVariable">
             <h2><?= $this->vars["topic"] ?></h2>
-       
-            <ol>
+            <p>Frage Nummer <?= $this->vars["currentpage"] ?> von <?= $this->vars["countquestions"] ?></p>
+            <form action="<?= SCRIPTNAME ?>?view=quiz" method="post">
+           
             <?= showquestion ($this->vars["answers"]); ?>
               
-            </ol>
-       
-            <p>Frage Nummer <?= $this->vars["currentpage"] ?> von <?= $this->vars["countquestions"] ?></p>
-            <form action="index.php" method="get">
+           
+
+            <input type="hidden" name="form" value="quiz">
                 <input type="submit" name="prev" value="Zurück">
                 <input type="submit" name="next" value="Weiter">
             </form>

@@ -1,6 +1,4 @@
-<div class="helpline">
-<code>Session: $_SESSION = <?php print_r($_SESSION); ?></code>
-</div>
+
     <footer>
         <ul>
             <li> <a href="#">Impressum</a> </li> 

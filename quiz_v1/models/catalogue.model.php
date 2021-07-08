@@ -8,7 +8,7 @@
 ##############################################################################################
 class Catalogue{
 
-var $id;
+
 var $question = array();
 var $catalogue = array(
     array("Wieviel sind 1+2?", 3,           7, 5, 3),
@@ -19,10 +19,12 @@ var $catalogue = array(
 
 /* constructor to pass id of the current question and generate array for current question*/
 
-function __construct($id){
-    $this->id = $id;
-    $this->question = $this->catalogue[$id];
-    
+function __construct(){
+    if (Session::get("currentQuestion") !== null) {
+          $this->question = $this->catalogue[Session::get("currentQuestion")];
+    }else {
+        $this->question = $this->catalogue[0];
+      }
     }
 
 function getQuestion(){
@@ -45,7 +47,8 @@ function getAnswers(){
 
 /*count all possible answers */
 function countAnswers(){
-    $this->getAnswers;
+    return count($this->getAnswers());
+
     }
 
 /* Count questions in catalogue*/

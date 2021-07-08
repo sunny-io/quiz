@@ -2,13 +2,22 @@
 
 
 function showquestion (array $liste){
-   {
+  
        $list = "";
-
-    foreach ($liste  as $value )
-        echo "<li>".$value."</li>";
+   /*    echo "<ol>"; 
+       foreach ($liste  as $value ) {
+       echo "<li>".$value."</li>";
+   }
+   echo "</ol>";*/
+ echo "<ul>";
+    foreach ($liste as $key => $value){
+      
+        echo "<li><input type='radio' name='useranswer' id='useranswer'  value='".$key."'>".$value."</li>";
     }
+    echo "</ul>";
+   
 }
+
 
 function showresults ($m_aResultslist){
     if (isset($m_aResultslist)) {
@@ -19,3 +28,4 @@ function showresults ($m_aResultslist){
 
 
 ?>
+

@@ -10,4 +10,4 @@
 </head>
 
 <body>
-    <?php if (!session_start()) {echo "Sessions nicht möglich";} ?>
+    
