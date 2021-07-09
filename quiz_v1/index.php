@@ -26,6 +26,8 @@ $controller = new Controller ($requests);
 
 $quiz = new Quiz("Das superduper Quiz"); // instanciates ocject Quiz with name an currentno
 $question = new Catalogue(); //instanciates question Cataloge and passes current question
+$no_answers = $question->countAnswers();
+echo ("<!-- debug $no_answers -->");
 
 
 

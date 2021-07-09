@@ -76,3 +76,11 @@ ul {
 .questions {
   display: block;
 }
+
+.overlay {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  left: 20vw;
+  top: 20vw;
+}

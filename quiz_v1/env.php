@@ -14,7 +14,7 @@
 
 define ("SCRIPTNAME", htmlspecialchars($_SERVER['PHP_SELF']));
 
-define("QUIZ_VERSION", "1,2");
+define("QUIZ_VERSION", "1.4");
 
 
 ?>

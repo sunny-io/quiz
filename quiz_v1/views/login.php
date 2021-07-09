@@ -6,9 +6,13 @@
     </div>
     <div class="content">
       <h1>quizname</h1>
+ 
       <div class="loginForm">
+      <!-- debug <?php print(var_dump($this->vars)); ?> -->
         <form action="<?= SCRIPTNAME ?>?view=quiz" method="post">
-          <p><label for="userName">Please enter your name:</label></p>
+          <p><label for="userName">Bitte gib Deinen Namen ein: *</label><br>
+          <span class="error"> <?= $this->vars["nameErr"]?></span>
+<br></p>
           <input type="hidden" name="form" value="login">
           <p><input type="text" name="username" id="username" /></p>
           <p><input type="submit" value="Start Quiz" class="button" /></p>
