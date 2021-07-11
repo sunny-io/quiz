@@ -1,4 +1,5 @@
 <?php
+require("controllers/dbconnect.php");
 ##############################################################################################
 #
 #class dealing with the catalogue of questions for the current round of questions
@@ -8,18 +9,16 @@
 ##############################################################################################
 class Catalogue{
 
+    
 
 var $question = array();
-var $catalogue = array(
-    array("Wieviel sind 1+2?", 3,           7, 5, 3),
-    array("Welche Farbe hat eine Zitrone?", 1, "gelb", "blau", "rot", "braun", "schwarz"),
-    array("Wieviel sind 2*3?", 2,           7, 6, 1, 5, 9),
-    array("In der Nacht ist es ...", 2, "hell", "dunkel"),
-    );
+var $catalogue = array();
 
 /* constructor to pass id of the current question and generate array for current question*/
 
 function __construct(){
+   $this->catalogue = initquiz();
+
     if (Session::get("currentQuestion") !== null) {
           $this->question = $this->catalogue[Session::get("currentQuestion")];
     }else {

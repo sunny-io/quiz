@@ -83,6 +83,8 @@ function validate_name (){
             $msg = "Dein Name muss mit einem Buchstaben beginnen, darf nur Buchstaben und Zahlen enthalten, und muss mindestens 3 Zeichen haben.";
             $this->nameErr = $msg;
             echo ("<!-- $this->nameErr -->");
+            echo "<script type>";
+            
         } 
     }
    
